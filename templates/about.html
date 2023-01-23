@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Crypto Market</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='about.css')}}">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo" width="50" height="50">
+        </div>
+        <div class="navbar-links">
+            <a href="/about" id="about-button">About</a>
+            <a href="/search" id="search-button">Search</a>
+            <a href="/contact" id="contact-button">Contact</a>
+        </div>
+    </div>
+
+    <div id="about-container">
+        <h1>About</h1>
+        <p>Welcome to our "Crypto Searcher" web application! Our goal is to provide users with real-time information and updates about various virtual currencies in an easy-to-use and user-friendly interface. We strive to make the world of cryptocurrency more accessible and understandable for everyone.</p>
+        <p>We are constantly working to improve and update our application, and we welcome any feedback or suggestions from our users. Thank you for choosing "Crypto Searcher" and we hope you find it useful in your cryptocurrency journey.</p>
+    </div>
+
+     <div class="updates-container">
+            <h1>Future Updates</h1>
+            <ul>
+                <li>- Implementation of charts for the evolution of the cryptocurrency prices</li>
+                <li>- Adding an alert system for users when the price of a coin reaches a specific level</li>
+                <li>- Optimizing the performance of the application for a better user experience</li>
+                <li>- Saving favorite coins with a "add to favorites" button/icon</li>
+                <li>- Comparing different cryptocurrencies</li>
+                <li>- Improving the security of the application by implementing stronger authentication and encryption methods</li>
+                <li>- Top 100" page displaying the current ranking of the most valuable cryptocurrencies</li>
+            </ul>
+        </div>
+
+</body>
+</html>
+

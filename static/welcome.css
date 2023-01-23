@@ -1,0 +1,96 @@
+body {
+    font-family: "Comic Sans MS", sans-serif;
+    background-image: url('images/welcome_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #333333;
+    justify-content: space-between;
+    border-radius: 25px;
+    color: #fff;
+    height: 70px;
+    box-shadow: 0px 0px 20px black;
+}
+
+.logo {
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.navbar-links {
+    display: flex;
+    margin-right: 30px;
+}
+
+.navbar-links a {
+    color: #fff;
+    background-color: goldenrod;
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-right: 40px;
+    margin-left: 10px;
+    font-size: 1.4em;
+}
+
+.navbar-links a:hover {
+    color: black;
+    background-color: gold;
+    transition: all 0.3s ease-in-out;
+    padding: 5px 20px;
+    border-radius: 20px;
+    transform: scale(1.1);
+}
+
+#welcome-container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+    padding: 50px 0;
+    background-color: #444444;
+    border-radius: 25px;
+    box-shadow: 0px 0px 20px black;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-size: 54px;
+    padding: 20px 0; /* marginea fata de sus*/
+    text-align: center;
+    margin: 0;
+}
+
+p {
+    color: #FFFFFF;
+    font-size: 25px;
+    line-height: 1.5;
+    padding: 20px 0;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

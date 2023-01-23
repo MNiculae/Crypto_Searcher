@@ -1,0 +1,114 @@
+{#{% extends 'welcome.html' %}#}
+{#{% block title %} Cryptocurrency searcher {% endblock %}#}
+{#{% block body %}#}
+{##}
+{##}
+{#Acestea sunt fragmente de cod Jinja, un limbaj de sablon utilizat pentru a crea dinamice si #}
+{#reusable template-uri in aplicatii Flask.#}
+{##}
+{#{% extends 'welcome.html' %} - Aceasta linie de cod indica ca acest template #}
+{#(in acest caz "search.html") se va extinde din alt template numit "welcome.html". #}
+{#Asta inseamna ca template-ul "search.html" va contine tot continutul din "welcome.html" #}
+{#plus continutul aditional specificat in template-ul "search.html".#}
+{##}
+{#{% block title %} Cryptocurrency searcher {% endblock %} - Aceasta linie de cod defineste #}
+{#un "block" cu numele "title" si atribuie valoarea "Cryptocurrency searcher" acestui block. #}
+{#In acest caz, in template-ul parinte "welcome.html" exista probabil un block cu acelasi nume #}
+{#"title", acest block va fi inlocuit cu valoarea "Cryptocurrency searcher" in template-ul "search.html".#}
+{##}
+{#{% block body %} - Aceasta linie de cod defineste un "block" cu numele "body". Continutul din #}
+{#acest block va fi inlocuit cu continutul specificat in template-ul "search.html"#}
+{##}
+{#Acestea sunt utilizate pentru a crea template-uri care pot fi folosite in mai multe pagini, #}
+{#fara a fi necesar sa se copieze si sa se insereze aceeasi informatie in mai multe pagini.#}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cryptocurrency Search</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='search.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/search.js') }}"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo" width="50" height="50">
+        </div>
+        <div class="navbar-links">
+            <a href="/about" id="about-button">About</a>
+            <a href="/search" id="search-button">Search</a>
+            <a href="/contact" id="contact-button">Contact</a>
+        </div>
+    </div>
+
+    <div id="search-container">
+        <h1>Crypto Search</h1>
+        <form action="/search_results">
+            <select id="cryptocurrency-select" name="cryptocurrency">
+                {% for coin in coins %}
+                    <option value="{{ coin.id }}">{{ coin.name }} ({{ coin.symbol }})</option>
+                {% endfor %}
+            </select>
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <div id="cryptocurrency-grid">
+    <div class="cryptocurrency-cell">
+        <div class="cryptocurrency-img">
+            <img src="{{ url_for('static', filename='images/bitcoin.png') }}" alt="vector image">
+        </div>
+        <div class="crypto-info">
+            <h3>Bitcoin</h3>
+            <p>${{price_BTC}}</p>
+        </div>
+    </div>
+    <div class="cryptocurrency-cell">
+        <div class="cryptocurrency-img">
+            <img src="{{ url_for('static', filename='images/ethereum.png') }}" alt="vector image">
+        </div>
+        <div class="crypto-info">
+            <h3>Ethereum</h3>
+            <p>${{price_ETH}}</p>
+        </div>
+    </div>
+    <div class="cryptocurrency-cell">
+        <div class="cryptocurrency-img">
+            <img src="{{ url_for('static', filename='images/litecoin.png') }}" alt="vector image">
+        </div>
+        <div class="crypto-info">
+            <h3>Litecoin</h3>
+            <p>${{price_LTC}}</p>
+        </div>
+    </div>
+    <div class="cryptocurrency-cell">
+        <div class="cryptocurrency-img">
+            <img src="{{ url_for('static', filename='images/xrp.png') }}" alt="vector image">
+        </div>
+        <div class="crypto-info">
+            <h3>XRP</h3>
+            <p>${{price_XRP}}</p>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
